@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+input[type="text"]{
+  @apply p-3  text-lg border border-solid border-gray-300 bg-white text-black rounded shadow-md outline-none transition-all duration-200 ease-linear focus:outline-none dark:border-neutral-600 dark:text-neutral-200 dark:placeholder:text-neutral-200
+}
+
+/* body{
+  min-height: 100vh;
+  min-height: 100%;
+  
+} */

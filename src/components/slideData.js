@@ -8,7 +8,7 @@ export const slideData = [
     {
         img: "image4.jpg",
         title: "Meet Our Company",
-        desc: "Providing Top Quality Servic",
+        desc: "Providing Top Quality Service",
         service: "We will deal with your failure that determines how you achieve success"
     },
     {

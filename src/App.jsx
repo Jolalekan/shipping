@@ -7,7 +7,6 @@ import Tracking from "./pages/Tracking"
 import { AuthProvider } from "./context/AuthProvider"
 import Dashboard from "./pages/Dashboard"
 import axios from "axios"
-import SuccessPage from "./pages/succesPage"
 import { QueryClient, QueryClientProvider, } from '@tanstack/react-query'
 import ShippingDetails from "./pages/ShippingDetails"
 import Contact from "./pages/Contact"
@@ -37,7 +36,6 @@ function App() {
                   <Route path="/login" element={<Login />} />
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/create" element={<CreateShipping />} />
-                  <Route path="/success" element={<SuccessPage />} />
                   <Route path="/tracking" element={<Tracking />} />
                   <Route path="/shipment/:trackingNumber/edit" element={<EditTracking />} />
                   <Route path="/shipment/:trackingNumber" element={<ShippingDetails />} />

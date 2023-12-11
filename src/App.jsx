@@ -3,13 +3,12 @@ import { Suspense } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { Layout } from "./components/Layout"
 import Login from "./pages/Login"
-import SignUp from "./pages/Signup"
 import Tracking from "./pages/Tracking"
 import { AuthProvider } from "./context/AuthProvider"
 import Dashboard from "./pages/Dashboard"
 import axios from "axios"
 import SuccessPage from "./pages/succesPage"
-import { QueryClient, QueryClientProvider, useQuery, } from '@tanstack/react-query'
+import { QueryClient, QueryClientProvider, } from '@tanstack/react-query'
 import ShippingDetails from "./pages/ShippingDetails"
 import Contact from "./pages/Contact"
 import Service from "./pages/Service"
@@ -36,7 +35,6 @@ function App() {
                   <Route path="/service" element={<Service />} />
                   <Route path="/about" element={<About />} />
                   <Route path="/login" element={<Login />} />
-                  <Route path="/signup" element={<SignUp />} />
                   <Route path="/dashboard" element={<Dashboard />} />
                   <Route path="/create" element={<CreateShipping />} />
                   <Route path="/success" element={<SuccessPage />} />

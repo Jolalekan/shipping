@@ -1,6 +1,6 @@
 import CountUp from "react-countUp"
-import { Parallax, Background } from "react-parallax"
-import image4 from '../assets/image3.jpg'
+import { Parallax } from "react-parallax"
+
 
 export const Counting = () => {
     return (
@@ -13,7 +13,7 @@ export const Counting = () => {
 
             <div className="bg-black opacity-70 text-white md:px-9 py-48 relative z-0 " >
 
-                <div className="flex flex-cols-4 flex-wrap justify-around items-center gap-10">
+                <div className="mx-20 flex flex-cols-4 flex-wrap justify-around items-center gap-10">
                     <div className="flex gap-2 ">
                         <div>
                             <img src="fact1.png" className="mt-5 " alt="" />

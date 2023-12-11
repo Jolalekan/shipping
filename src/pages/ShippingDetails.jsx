@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom'
 import { useQuery } from "@tanstack/react-query"
 import ShipmentHistory from '../components/ShipmentHistory'
 
-
 const ShippingDetails = () => {
 
     const { trackingNumber } = useParams()
@@ -13,7 +12,6 @@ const ShippingDetails = () => {
         queryKey: ['shipmentDetails', trackingNumber],
         queryFn: async () => {
             const response = await axios.get(`/api/tracking/${trackingNumber}`);
-            console.log(response)
             return response.data;
         }
     });
@@ -26,22 +24,18 @@ const ShippingDetails = () => {
         return <p>Error fetching shipment details.</p>;
     }
 
-
     return (
         <div  className="p-3 container max-w-7xl mx-auto  bg-gray-50  mb-5 ">
             <h2 className='mb-5 pt-5 font-bold text-gray-800 lg:text-2xl uppercase text-center'>Shipment Details</h2>
             {shipment && (
                 <div className='p-2'>
 
-                    <div className=' grid grid-cols-3 '> 
-                        
+                    <div className=' grid grid-cols-3 '>                         
                         <div >
                             <h2 className=' md:text-2xl font-semibold text-gray-800'>Ship Date</h2>
                             <div class="mr-2 border-t-4 border-teal-700 lg:w-48 my-1"></div>
                             <p className='text-sm md:text-xl font-medium'>{new Date(shipment.dateOfShipping).toLocaleDateString()}</p>
-
                         </div>
-
                         <div className='text-center'>
                             <h2 className=' md:text-2xl font-semibold text-gray-800'>Delivery Date</h2>
                             <div className=' border-t-4 border-teal-700 my-1 '></div>
@@ -133,19 +127,3 @@ const ShippingDetails = () => {
 }
 
 export default ShippingDetails
-
-{/* <div>
-<h2 className='text-lg font-medium'>LOCATION</h2>
-</div>
-<div>
-<h2 className='text-lg font-medium'>DESCRIPTION</h2>
-</div>
-
-<div>
-                          
-                          <p className='text-lg font-medium '>{shipment.location}</p>
-                      </div>
-                      <div>
-                          
-                          <p className='text-lg font-medium'>{shipment.details}</p>
-                      </div> */}

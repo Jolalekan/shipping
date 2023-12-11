@@ -8,8 +8,6 @@ import { Partner } from '../components/Partner'
 
 const Tracking = () => {
 
-    // const { trackingNumber } = useParams()
-    // console.log("Params", useParams())
     const queryClient = useQueryClient()
     const navigate = useNavigate()
 
@@ -22,18 +20,14 @@ const Tracking = () => {
         e.preventDefault()
 
         try {
-
             setLoading(true)
-            console.log(trackingNumber)
 
             const response = await axios.get(`api/tracking/${trackingNumber}`)
-
 
             queryClient.invalidateQueries("shipmentDetails")
             navigate(`/shipment/${trackingNumber}`)
 
             setShipmet(response.data)
-
 
             setError("")
 
@@ -62,7 +56,7 @@ const Tracking = () => {
                         onChange={(e) => setTrackingNumber(e.target.value)}
                         className="w-48 lg:w-96 self-center"
                     />
-                    <button className='self-center rounded-xl w-32 md:w-48 bg-gray-900 p-4 text-gray-200 font-medium '>Track</button>
+                    <button className='self-center rounded-xl w-32 md:w-48 bg-gray-900 p-4 text-gray-200 font-medium disabled:opacity-80' disabled={loading}>{loading ? "Tracking..." : "Track"}</button>
                     {error && <p className='text-red-900 text-sm font-medium'>{error}</p>}
                 </form>
             </div>

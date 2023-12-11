@@ -42,9 +42,9 @@ export const Hero = () => {
                 return (
                     <div className={index === currentSlide ? "current slide" : "slide"} key={index}>
                         <img src={slide.img} alt="" />
-                        <div className=" content leading" >
-                            <h2 className="text-6xl uppercase font-bold text-white  shadow-xl border-teal-800">{slide.title}</h2>
-                            <p className="text-5xl text-white font-bold ">{slide.desc}</p>
+                        <div className=" content" >
+                            <h2 className=" text-4xl md:text-5xl uppercase font-bold text-white shadow-xl border-teal-800">{slide.title}</h2>
+                            <p className="text-3xl md:text-4xl text-white font-bold ">{slide.desc}</p>
                             <hr />
 
                             {index === 0 && (

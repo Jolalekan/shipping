@@ -1,17 +1,11 @@
 import axios from "axios"
 
-// export default axios.create({
-//     baseURL: 'http://localhost:4000',
-
-// })
-
 export const apiLogin = async (email, password) => {
     try {
         const response = await axios.post("/api/login", { email, password })
         if (response.status >= 200 && response.status < 300) {
 
             const userData = response.data
-            console.log(userData)
             return userData
         }
         else {
@@ -31,7 +25,6 @@ export const tracking = async (trackingNumber) => {
         if (response.status >= 200 && response.status < 300) {
 
             const userData = response.data
-            console.log(userData)
             return userData
         }
         else {

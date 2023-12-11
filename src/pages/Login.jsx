@@ -27,7 +27,6 @@ const Login = () => {
             setAuth(userInfo)
 
             navigate("/")
-
             setEmail("");
             setPassword("");
             setError("");
@@ -56,7 +55,7 @@ const Login = () => {
                 <div className="my-4 flex items-center before:-mt-0.5 after:-mt-0.5 before:flex-1 before:border-t before:border-neutral-300 affter:flex-1 after:border-t after:border-neutral-300">
                     Or
                 </div>
-                <div>
+                <div className="p-5">
                     <form className="flex flex-col gap-5" onSubmit={handleSubmit}>
                         <div >
                             <h2 className="mb-5 text-xl">Email</h2>
@@ -76,7 +75,6 @@ const Login = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-
                         <button className="self-center w-48 rounded-xl text-xl text-gray-200 p-3 bg-gray-800 disabled:opacity-90 hover:opacity-90" disabled={loading}>{loading ? "Submitting" : "Submit"}</button>
                         {error && <p className="text-red-900">{error}</p>}
                     </form>

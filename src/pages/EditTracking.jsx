@@ -86,15 +86,6 @@ const EditTracking = () => {
         <div className="max-w-7xl mx-auto my-12 p-5">
             <h2 className="lg:text-2xl font-medium uppercase mb-5">Edit Tracking </h2>
             <form className=" flex flex-col gap-5" onSubmit={handleSubmit}>
-                {/* <div>
-                <h2 className="font-medium">Date</h2>
-                    <input type="date"
-                        id="date"
-                        value={formData.date}
-                        onChange={handleChange}
-                        className="w-64 p-3 mt-2 border rounded"
-                    />
-                </div> */}
                 <div>
                 <h2 className="font-medium">Activities</h2>
                     <input type="text"

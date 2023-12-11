@@ -4,8 +4,6 @@ import axios from 'axios'
 const CreateShipping = () => {
 
     const token = localStorage.getItem("token")
-    console.log("submit token", token)
-
 
     const [formData, setFormData] = useState({})
     const [loading, setLoading] = useState(false)
@@ -18,7 +16,6 @@ const CreateShipping = () => {
             ...formData,
             [e.target.id]: e.target.value
         })
-
     }
 
     const handleSubmit = async (e) => {
@@ -81,7 +78,6 @@ const CreateShipping = () => {
                         id="dateOfShipping"
                         onChange={handleChange}
                         value={formData.dateOfShipping}
-                        // onChange={(e) => setSenders(e.target.value)}
                         className="w-64 p-3 mt-2 border rounded"
                         required
                     />
@@ -93,7 +89,6 @@ const CreateShipping = () => {
                         id="dateOfDelivery"
                         onChange={handleChange}
                         value={formData.dateOfDelivery}
-                        // onChange={(e) => setDelivery(e.target.value)}
                         className="w-64 mt-2 border p-3 rounded"
                         required
                     />
@@ -106,7 +101,6 @@ const CreateShipping = () => {
                         id="country"
                         onChange={handleChange}
                         value={formData.country}
-                        // onChange={(e) => setSenders(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -118,7 +112,6 @@ const CreateShipping = () => {
                         id="sender"
                         onChange={handleChange}
                         value={formData.sender}
-                        // onChange={(e) => setSenders(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -130,7 +123,6 @@ const CreateShipping = () => {
                         id="receiver"
                         onChange={handleChange}
                         value={formData.receiver}
-                        // onChange={(e) => setReceivers(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -142,7 +134,6 @@ const CreateShipping = () => {
                         id="sendAddress"
                         onChange={handleChange}
                         value={formData.sendAddress}
-                        // onChange={(e) => setSenderAddress(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -154,7 +145,6 @@ const CreateShipping = () => {
                         id="receiveAddress"
                         onChange={handleChange}
                         value={formData.receiveAddress}
-                        // onChange={(e) => setReceiverAddress(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -166,7 +156,6 @@ const CreateShipping = () => {
                         id="no"
                         onChange={handleChange}
                         value={formData.no}
-                        // onChange={(e) => setNo(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -178,7 +167,6 @@ const CreateShipping = () => {
                         id="qty"
                         onChange={handleChange}
                         value={formData.qty}
-                        // onChange={(e) => setQty(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -190,7 +178,6 @@ const CreateShipping = () => {
                         id="content"
                         onChange={handleChange}
                         value={formData.content}
-                        // onChange={(e) => setContent(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -204,7 +191,6 @@ const CreateShipping = () => {
                         id="service"
                         onChange={handleChange}
                         value={formData.service}
-                        // onChange={(e) => setService(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -217,7 +203,6 @@ const CreateShipping = () => {
                         id="weight"
                         onChange={handleChange}
                         value={formData.weight}
-                        // onChange={(e) => setService(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -229,7 +214,6 @@ const CreateShipping = () => {
                         id="date"
                         onChange={handleChange}
                         value={formData.date}
-                        // onChange={(e) => setweight(e.target.value)}
                         className="w-64 mt-2 border p-3 rounded"
                         required
                     />
@@ -241,7 +225,6 @@ const CreateShipping = () => {
                         id="activities"
                         onChange={handleChange}
                         value={formData.activities}
-                        // onChange={(e) => setweight(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -253,7 +236,6 @@ const CreateShipping = () => {
                         id="location"
                         onChange={handleChange}
                         value={formData.location}
-                        // onChange={(e) => setweight(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />
@@ -264,7 +246,6 @@ const CreateShipping = () => {
                         id="details"
                         onChange={handleChange}
                         value={formData.details}
-                        // onChange={(e) => setweight(e.target.value)}
                         className="w-full lg:w-2/3 mt-2"
                         required
                     />

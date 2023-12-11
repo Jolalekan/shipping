@@ -3,15 +3,16 @@ import { DataGrid, GridToolbar } from "@mui/x-data-grid";
 import { Link } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
-
+import { FaTrash } from 'react-icons/fa';
+import { FaPencilAlt } from 'react-icons/fa';
+import { FaEye } from 'react-icons/fa';
 
 const TrackTable = ({ shippingList }) => {
 
   const queryClient = useQueryClient()
-  console.log(shippingList)
+
   const rows = shippingList && Array.isArray(shippingList.data) ? shippingList.data : [];
 
-  const [selectedRow, setSelectedRow]= useState(null)
   const columns = [
     {
       field: '_id',
@@ -113,10 +114,32 @@ const TrackTable = ({ shippingList }) => {
       width: 90,
       renderCell: (params) => (
         <div className='flex gap-3'>
-        <Link to={`/shipment/${params.row.trackingNumber}`}>View</Link>
-        <Link to={`/shipment/${params.row.trackingNumber}/edit`}>Edit</Link>
-        <button onClick={() => handleDelete(params.row.trackingNumber)}>Delete</button>
-       </div>
+          <div className=' border-r-8 text-2xl '>
+            <Link to={`/shipment/${params.row.trackingNumber}`}>
+              <FaEye  />
+            </Link>
+          </div>
+          <Link to={`/shipment/${params.row.trackingNumber}/edit`} className="text-2xl text-teal-800">
+            <FaPencilAlt  />
+          </Link>
+
+        </div>
+      ),
+    },
+  ];
+  const handleDel = [
+    {
+      field: "delete",
+      headerName: "Delete",
+      width: 90,
+      renderCell: (params) => (
+        <div className='flex gap-3'>
+          <button  className='text-2xl text-red-500' onClick={() => handleDelete(params.row.trackingNumber)}>
+
+            <FaTrash  />
+          </button>
+
+        </div>
       ),
     },
   ];
@@ -143,7 +166,7 @@ const TrackTable = ({ shippingList }) => {
     <div style={{ height: 400, width: '100%' }}>
       <DataGrid
         rows={rows}
-        columns={[...columns, ...column]}
+        columns={[...columns, ...column, ...handleDel]}
         getRowId={(row) => row._id}
         initialState={{
           pagination: {
@@ -170,12 +193,6 @@ const TrackTable = ({ shippingList }) => {
         rowsPerPageOptions={[5, 10, 25]}
       />
 
-        {selectedRow && (
-          <div>
-            {selectedRow.sender}
-            {console.log(selectedRow.sender)}
-          </div>
-          )}
 
     </div>
   )

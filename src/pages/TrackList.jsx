@@ -14,8 +14,7 @@ const TrackList = () => {
   })
 
   if (isLoading) return "loading"
-  console.log(data)
-
+  
 
   return (
     <div>

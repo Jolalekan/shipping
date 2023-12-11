@@ -1,6 +1,6 @@
 import { Hero } from "../components/Hero"
 import { Company } from "../components/Company"
-import { Carieer } from "../components/carieer"
+import { Carieer } from "../components/Carieer"
 import { Counting } from "../components/Counting"
 import { WhyWork } from "../components/WhyWork"
 import { Feedback } from "../components/FeedBack"

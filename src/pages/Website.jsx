@@ -19,10 +19,6 @@ export const Website = () => {
             <Work />
             <Feedback />
             <Partner />
-
-
-
-
         </div>
     )
 }

@@ -22,7 +22,7 @@ const About = () => {
     return (
         <div>
             <Company />
-            <div className='my-12 lg:mx-28 grid lg:grid-cols-2 justify-between gap-8 '>
+            <div className='lg:mx-28 grid lg:grid-cols-2 justify-between gap-8 '>
                 <article>
                     <h2 className='text-center mx-10 text-xl p-3 font-bold text-gray-800'>Company Overview</h2>
                     <p className='text-gray-500 text-justify mx-10'>
@@ -30,8 +30,8 @@ const About = () => {
                         Illo quibusdam minima sed ipsam quod quam, necessitatibus dolore impedit blanditiis libero officiis, recusandae numquam velit adipisci accusamus. Architecto exercitationem ipsum possimus voluptatibus atque maiores rem beatae nesciunt dolorum aspernatur.
                     </p>
                 </article>
-                <div>
-                    <h2 className='text-2xl p-3 font-bold text-gray-800'>Our Core value</h2>
+                <div className='p-6'>
+                    <h2 className='text-center text-2xl p-3 font-bold text-gray-800'>Our Core value</h2>
                     
                     {data.map((item, i) => (
                         <div key={i} className='p-2 mb-4 w-full lg:w-4/6 '>

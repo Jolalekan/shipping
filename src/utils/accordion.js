@@ -1,13 +1,9 @@
-import { HiScissors, HiShieldCheck } from "react-icons/hi"
-import { MdCancel, MdAnalytics } from "react-icons/md"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+
 
 export const data = [
     {
-        // icons: <HiScissors />,
-        // icons:  <FontAwesomeIcon icon={faChevronUp} />,
-        heading: "Best interest rates on the market",
+
+        heading: "Best interest in the market",
         details: "lorem Exercitation in fugist est ut ad ea cupidatat ut in cupidatat occaecat ut occacecat conssequen  lorem Exercitation in fugist est ut ad ea cupidatat ut in cupidatat occaecat ut occacecat conssequen 1",
         expanded: false,
     },

@@ -10,7 +10,7 @@ export const Counting = () => {
             strength={-300}
             className="mt-8 mb-8 absolute object-cover"
         >
-            <div className="bg-black opacity-70 text-white md:px-9 py-48 relative z-0 " >
+            <div className="bg-black opacity-70 text-white md:px-9 py-16 relative z-0 " >
 
                 <div className="mx-20 flex flex-cols-4 flex-wrap justify-around items-center gap-10">
                     <div className="flex gap-2 ">

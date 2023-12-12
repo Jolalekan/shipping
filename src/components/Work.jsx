@@ -16,8 +16,7 @@ export const Work = () => {
     }
 
     return (
-        <div className='md:mx-20  my-16'>
-
+        <div className='md:mx-20  my-16 p-4'>
             {workData.map((item, i) => (
                 <div key={i} className='mx-3 mb-4 md:w-2/6 border'>
                     <div className={`p-1 lg:p-3 flex gap-4 items-center border-2 cursor-pointer ${expandedItem === i ? "text-teal-900" : "bg-white text-gray-300"} `}>

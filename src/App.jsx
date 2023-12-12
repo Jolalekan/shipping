@@ -14,6 +14,7 @@ import Service from "./pages/Service"
 import About from "./pages/About"
 import EditTracking from "./pages/EditTracking"
 import CreateShipping from "./pages/CreateShipping"
+import ScrollToTop from "./components/ScrollToTop"
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <AuthProvider>
 
           <BrowserRouter>
+            <ScrollToTop />
             <Suspense fallback={<div>Loading.... </div>}>
               <Routes>
                 <Route element={<Layout />}>

@@ -28,7 +28,7 @@ export const NavBar = () => {
                     <img className="h-16 mr-2 " src="./image1.jpg" alt=""
                         loading="lazy"
                     />
-                    <p className="md:text-2xl font-bold text-gray-100 uppercase">abc <span className="md:text-xl text-lg"> LOGISTICS</span></p>
+                    <p className="md:text-2xl font-bold text-gray-100 uppercase">abc <span className="md:text-xl "> LOGISTICS</span></p>
                 </Link>
 
                 <button

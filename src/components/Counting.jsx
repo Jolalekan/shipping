@@ -1,4 +1,4 @@
-import CountUp from "react-countUp"
+import CountUp from 'react-countup';
 import { Parallax } from "react-parallax"
 
 
